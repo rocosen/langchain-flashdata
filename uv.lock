@@ -1320,10 +1320,11 @@ wheels = [
 
 [[package]]
 name = "langchain-flashdata"
-version = "0.1.1"
+version = "0.2.0"
 source = { editable = "." }
 dependencies = [
     { name = "httpx" },
+    { name = "jsonschema" },
     { name = "langchain-core" },
     { name = "pydantic" },
 ]
@@ -1348,6 +1349,7 @@ dev = [
 [package.metadata]
 requires-dist = [
     { name = "httpx", specifier = ">=0.28.1,<1" },
+    { name = "jsonschema", specifier = ">=4.23,<5" },
     { name = "langchain", marker = "extra == 'examples'", specifier = ">=1.4.4,<2" },
     { name = "langchain", extras = ["mcp"], marker = "extra == 'mcp'", specifier = ">=1.4.4,<2" },
     { name = "langchain-core", specifier = ">=1.6.9,<2" },

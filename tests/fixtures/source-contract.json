@@ -1,0 +1,790 @@
+{
+  "google_search": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "query": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 2000
+      },
+      "gl": {
+        "type": "string",
+        "minLength": 2,
+        "maxLength": 2,
+        "pattern": "^[A-Za-z]{2}$",
+        "description": "Country code. Set explicitly when needed; omitted values use the search provider’s behavior."
+      },
+      "hl": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 35,
+        "pattern": "^[A-Za-z0-9-]+$",
+        "description": "Interface language. Set explicitly when needed; omitted values use the search provider’s behavior."
+      },
+      "location": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 200
+      },
+      "num": {
+        "type": "integer",
+        "minimum": 1,
+        "maximum": 100,
+        "description": "Requested result count. Actual count varies by query and search type; no fixed value is added when omitted."
+      },
+      "page": {
+        "type": "integer",
+        "minimum": 1,
+        "maximum": 100,
+        "description": "Requested page. Set explicitly for pagination; each page is a separate query."
+      },
+      "tbs": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 200
+      },
+      "autocorrect": {
+        "type": "boolean"
+      }
+    },
+    "required": [
+      "query"
+    ]
+  },
+  "google_images": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "query": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 2000
+      },
+      "gl": {
+        "type": "string",
+        "minLength": 2,
+        "maxLength": 2,
+        "pattern": "^[A-Za-z]{2}$",
+        "description": "Country code. Set explicitly when needed; omitted values use the search provider’s behavior."
+      },
+      "hl": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 35,
+        "pattern": "^[A-Za-z0-9-]+$",
+        "description": "Interface language. Set explicitly when needed; omitted values use the search provider’s behavior."
+      },
+      "location": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 200
+      },
+      "num": {
+        "type": "integer",
+        "minimum": 1,
+        "maximum": 100,
+        "description": "Requested result count. Actual count varies by query and search type; no fixed value is added when omitted."
+      },
+      "page": {
+        "type": "integer",
+        "minimum": 1,
+        "maximum": 100,
+        "description": "Requested page. Set explicitly for pagination; each page is a separate query."
+      },
+      "tbs": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 200
+      },
+      "autocorrect": {
+        "type": "boolean"
+      }
+    },
+    "required": [
+      "query"
+    ]
+  },
+  "google_news": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "query": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 2000
+      },
+      "gl": {
+        "type": "string",
+        "minLength": 2,
+        "maxLength": 2,
+        "pattern": "^[A-Za-z]{2}$",
+        "description": "Country code. Set explicitly when needed; omitted values use the search provider’s behavior."
+      },
+      "hl": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 35,
+        "pattern": "^[A-Za-z0-9-]+$",
+        "description": "Interface language. Set explicitly when needed; omitted values use the search provider’s behavior."
+      },
+      "location": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 200
+      },
+      "num": {
+        "type": "integer",
+        "minimum": 1,
+        "maximum": 100,
+        "description": "Requested result count. Actual count varies by query and search type; no fixed value is added when omitted."
+      },
+      "page": {
+        "type": "integer",
+        "minimum": 1,
+        "maximum": 100,
+        "description": "Requested page. Set explicitly for pagination; each page is a separate query."
+      },
+      "tbs": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 200
+      },
+      "autocorrect": {
+        "type": "boolean"
+      }
+    },
+    "required": [
+      "query"
+    ]
+  },
+  "google_shopping": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "query": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 2000
+      },
+      "gl": {
+        "type": "string",
+        "minLength": 2,
+        "maxLength": 2,
+        "pattern": "^[A-Za-z]{2}$",
+        "description": "Country code. Set explicitly when needed; omitted values use the search provider’s behavior."
+      },
+      "hl": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 35,
+        "pattern": "^[A-Za-z0-9-]+$",
+        "description": "Interface language. Set explicitly when needed; omitted values use the search provider’s behavior."
+      },
+      "location": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 200
+      },
+      "num": {
+        "type": "integer",
+        "minimum": 1,
+        "maximum": 100,
+        "description": "Requested result count. Actual count varies by query and search type; no fixed value is added when omitted."
+      },
+      "page": {
+        "type": "integer",
+        "minimum": 1,
+        "maximum": 100,
+        "description": "Requested page. Set explicitly for pagination; each page is a separate query."
+      },
+      "tbs": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 200
+      },
+      "autocorrect": {
+        "type": "boolean"
+      }
+    },
+    "required": [
+      "query"
+    ]
+  },
+  "google_videos": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "query": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 2000
+      },
+      "gl": {
+        "type": "string",
+        "minLength": 2,
+        "maxLength": 2,
+        "pattern": "^[A-Za-z]{2}$",
+        "description": "Country code. Set explicitly when needed; omitted values use the search provider’s behavior."
+      },
+      "hl": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 35,
+        "pattern": "^[A-Za-z0-9-]+$",
+        "description": "Interface language. Set explicitly when needed; omitted values use the search provider’s behavior."
+      },
+      "location": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 200
+      },
+      "num": {
+        "type": "integer",
+        "minimum": 1,
+        "maximum": 100,
+        "description": "Requested result count. Actual count varies by query and search type; no fixed value is added when omitted."
+      },
+      "page": {
+        "type": "integer",
+        "minimum": 1,
+        "maximum": 100,
+        "description": "Requested page. Set explicitly for pagination; each page is a separate query."
+      },
+      "tbs": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 200
+      },
+      "autocorrect": {
+        "type": "boolean"
+      }
+    },
+    "required": [
+      "query"
+    ]
+  },
+  "google_places": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "query": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 2000
+      },
+      "gl": {
+        "type": "string",
+        "minLength": 2,
+        "maxLength": 2,
+        "pattern": "^[A-Za-z]{2}$",
+        "description": "Country code. Set explicitly when needed; omitted values use the search provider’s behavior."
+      },
+      "hl": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 35,
+        "pattern": "^[A-Za-z0-9-]+$",
+        "description": "Interface language. Set explicitly when needed; omitted values use the search provider’s behavior."
+      },
+      "location": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 200
+      },
+      "num": {
+        "type": "integer",
+        "minimum": 1,
+        "maximum": 100,
+        "description": "Requested result count. Actual count varies by query and search type; no fixed value is added when omitted."
+      },
+      "page": {
+        "type": "integer",
+        "minimum": 1,
+        "maximum": 100,
+        "description": "Requested page. Set explicitly for pagination; each page is a separate query."
+      },
+      "tbs": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 200
+      },
+      "autocorrect": {
+        "type": "boolean"
+      }
+    },
+    "required": [
+      "query"
+    ]
+  },
+  "youtube_search": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "query": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 2000
+      },
+      "max_results": {
+        "type": "integer",
+        "minimum": 1,
+        "maximum": 20,
+        "default": 20
+      },
+      "filters": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "360": {
+            "type": "boolean"
+          },
+          "duration": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 2000,
+            "enum": [
+              "<4",
+              "4-20",
+              ">20"
+            ]
+          },
+          "sort_by": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 2000,
+            "enum": [
+              "rating",
+              "relevance",
+              "view_count",
+              "upload_date"
+            ]
+          },
+          "type": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 2000,
+            "enum": [
+              "video",
+              "channel",
+              "playlist",
+              "movie"
+            ]
+          },
+          "upload_date": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 2000,
+            "enum": [
+              "today",
+              "last_hour",
+              "this_week",
+              "this_month",
+              "this_year"
+            ]
+          },
+          "3d": {
+            "type": "boolean"
+          },
+          "4k": {
+            "type": "boolean"
+          },
+          "creative_commons": {
+            "type": "boolean"
+          },
+          "hd": {
+            "type": "boolean"
+          },
+          "hdr": {
+            "type": "boolean"
+          },
+          "live": {
+            "type": "boolean"
+          },
+          "location": {
+            "type": "boolean"
+          },
+          "purchased": {
+            "type": "boolean"
+          },
+          "subtitles": {
+            "type": "boolean"
+          },
+          "vr180": {
+            "type": "boolean"
+          }
+        }
+      }
+    },
+    "required": [
+      "query"
+    ]
+  },
+  "youtube_search_extended": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "query": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 2000
+      },
+      "max_results": {
+        "type": "integer",
+        "minimum": 1,
+        "maximum": 700,
+        "default": 20
+      },
+      "filters": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "360": {
+            "type": "boolean"
+          },
+          "duration": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 2000,
+            "enum": [
+              "<4",
+              "4-20",
+              ">20"
+            ]
+          },
+          "sort_by": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 2000,
+            "enum": [
+              "rating",
+              "relevance",
+              "view_count",
+              "upload_date"
+            ]
+          },
+          "type": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 2000,
+            "enum": [
+              "video",
+              "channel",
+              "playlist",
+              "movie"
+            ]
+          },
+          "upload_date": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 2000,
+            "enum": [
+              "today",
+              "last_hour",
+              "this_week",
+              "this_month",
+              "this_year"
+            ]
+          },
+          "3d": {
+            "type": "boolean"
+          },
+          "4k": {
+            "type": "boolean"
+          },
+          "creative_commons": {
+            "type": "boolean"
+          },
+          "hd": {
+            "type": "boolean"
+          },
+          "hdr": {
+            "type": "boolean"
+          },
+          "live": {
+            "type": "boolean"
+          },
+          "location": {
+            "type": "boolean"
+          },
+          "purchased": {
+            "type": "boolean"
+          },
+          "subtitles": {
+            "type": "boolean"
+          },
+          "vr180": {
+            "type": "boolean"
+          }
+        }
+      }
+    },
+    "required": [
+      "query"
+    ]
+  },
+  "youtube_metadata": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "video_id": {
+        "type": "string",
+        "minLength": 11,
+        "maxLength": 11,
+        "pattern": "^[A-Za-z0-9_-]{11}$"
+      },
+      "include_formats": {
+        "type": "boolean",
+        "default": true
+      },
+      "include_chapters": {
+        "type": "boolean",
+        "default": true
+      }
+    },
+    "required": [
+      "video_id"
+    ]
+  },
+  "youtube_transcript": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "video_id": {
+        "type": "string",
+        "minLength": 11,
+        "maxLength": 11,
+        "pattern": "^[A-Za-z0-9_-]{11}$"
+      },
+      "language": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 35,
+        "pattern": "^[A-Za-z0-9-]+$",
+        "default": "en"
+      },
+      "auto": {
+        "type": "boolean",
+        "default": true,
+        "description": "true selects automatically generated captions; false selects manually provided captions. Does not fall back between the two."
+      }
+    },
+    "required": [
+      "video_id"
+    ]
+  },
+  "youtube_captions": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "video_id": {
+        "type": "string",
+        "minLength": 11,
+        "maxLength": 11,
+        "pattern": "^[A-Za-z0-9_-]{11}$"
+      },
+      "language": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 35,
+        "pattern": "^[A-Za-z0-9-]+$",
+        "default": "en"
+      },
+      "auto": {
+        "type": "boolean",
+        "default": false,
+        "description": "true selects automatically generated captions; false selects manually provided captions. Does not fall back between the two."
+      }
+    },
+    "required": [
+      "video_id"
+    ]
+  },
+  "youtube_trainability": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "video_id": {
+        "type": "string",
+        "minLength": 11,
+        "maxLength": 11,
+        "pattern": "^[A-Za-z0-9_-]{11}$"
+      }
+    },
+    "required": [
+      "video_id"
+    ]
+  },
+  "youtube_channel": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "handle": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 100
+      },
+      "video_limit": {
+        "type": "integer",
+        "minimum": 1,
+        "maximum": 100,
+        "default": 20
+      }
+    },
+    "required": [
+      "handle"
+    ]
+  },
+  "youtube_suggestions": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "query": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 2000
+      },
+      "language": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 35,
+        "pattern": "^[A-Za-z0-9-]+$",
+        "default": "en"
+      },
+      "region": {
+        "type": "string",
+        "minLength": 2,
+        "maxLength": 2,
+        "default": "US",
+        "pattern": "^[A-Za-z]{2}$"
+      }
+    },
+    "required": [
+      "query"
+    ]
+  },
+  "youtube_download": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "video_id": {
+        "type": "string",
+        "minLength": 11,
+        "maxLength": 11,
+        "pattern": "^[A-Za-z0-9_-]{11}$"
+      },
+      "download_type": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 11,
+        "default": "audio_video",
+        "enum": [
+          "audio_video",
+          "video",
+          "audio"
+        ]
+      },
+      "video_quality": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 40,
+        "default": "<=720",
+        "enum": [
+          "best",
+          "worst",
+          "<=144",
+          "==144",
+          ">=144",
+          "<=360",
+          "==360",
+          ">=360",
+          "<=480",
+          "==480",
+          ">=480",
+          "<=720",
+          "==720",
+          ">=720",
+          "<=1080",
+          "==1080",
+          ">=1080",
+          "<=1440",
+          "==1440",
+          ">=1440",
+          "<=2160",
+          "==2160",
+          ">=2160",
+          "<=4320",
+          "==4320",
+          ">=4320"
+        ]
+      },
+      "fps": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 6,
+        "pattern": "^(?:>=|<=|==)(?:[1-9]\\d?|1\\d\\d|2[0-3]\\d|240)$"
+      },
+      "audio_language": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 8,
+        "default": "default",
+        "enum": [
+          "default",
+          "original"
+        ]
+      },
+      "audio_quality": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 10,
+        "default": "best",
+        "enum": [
+          "best",
+          "320",
+          "256",
+          "192",
+          "128"
+        ]
+      },
+      "yt_dlp_format": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 1024
+      },
+      "upload_metadata": {
+        "type": "boolean",
+        "default": false
+      },
+      "output_format": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 10,
+        "default": "mp4",
+        "enum": [
+          "mp4",
+          "webm",
+          "mkv",
+          "m4a",
+          "mp3",
+          "opus"
+        ]
+      },
+      "start_at": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 8,
+        "pattern": "^\\d{1,2}:[0-5]\\d:[0-5]\\d$"
+      },
+      "end_at": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 8,
+        "pattern": "^\\d{1,2}:[0-5]\\d:[0-5]\\d$"
+      }
+    },
+    "required": [
+      "video_id"
+    ]
+  }
+}

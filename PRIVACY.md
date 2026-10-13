@@ -1,10 +1,17 @@
 # Data handling
 
-The native tools send their validated query or video ID, selected parameters,
-and an `X-API-Key` header directly to `https://data.flashdata.dev/v1/queries/realtime`.
-They use a random request ID and a package version user agent. No other service
-is contacted by this package's HTTP client, and it does not write query results
-or credentials to disk.
+Realtime tools send the validated query, video ID or channel handle, selected
+parameters and an `X-API-Key` header to `https://data.flashdata.dev/v1/queries/realtime`.
+Download submits to `https://data.flashdata.dev/v1/queries`, including the customer
+storage destination and credentials configured by your application. FlashData uses
+those credentials to deliver media to that storage provider.
+
+Download readers call `https://api.flashdata.dev/v2/jobs` and `/v2/api-access`.
+Completed result JSON is fetched from the trusted result origin reported by
+FlashData, using a signed URL and **without** the API key. The client does not
+fetch the delivered media file, write results/credentials to disk, follow arbitrary
+redirects or retry paid requests. Authenticated requests include a random request
+ID and package version user agent. Result JSON reads are limited to 20 MiB.
 
 FlashData handles requests according to its [privacy policy](https://flashdata.dev/legal/privacy).
 Queries consume credits according to your account and the current pricing.

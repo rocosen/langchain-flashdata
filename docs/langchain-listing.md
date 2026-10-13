@@ -1,7 +1,9 @@
-# Prepared LangChain listing form
+# Original toolkit listing form (historical)
 
-The package is published on PyPI. Copy the sections below into the official
-Integration listing form after verifying installation of the current release.
+This form was submitted as [issue #6573](https://github.com/langchain-ai/docs/issues/6573)
+and accepted through [PR #6577](https://github.com/langchain-ai/docs/pull/6577).
+Do not resubmit it. New source-specific classes and guide URLs are recorded in
+[tasks.json](tasks.json); they require distinct listing requests after publication.
 
 ### Display or class name
 

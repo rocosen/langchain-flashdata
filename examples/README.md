@@ -4,6 +4,14 @@ Install from the repository with `pip install '.[examples]'` and set
 `FLASHDATA_API_KEY`. No example contains a real key. Direct calls consume
 FlashData credits; research examples also use your model provider account.
 
+## All 15 task examples
+
+[Choose a task guide](https://github.com/flashdata-dev/langchain-flashdata/blob/main/docs/tools/README.md).
+Each guide includes a source-specific script in `examples/tasks/`, input/output
+fields and a LangGraph integration. These are usage examples, not public marketplace objects.
+`direct_tools.py` accepts all 15 source names; it constructs only the selected tool.
+Download additionally requires `FLASHDATA_DOWNLOAD_STORAGE` and returns a job receipt.
+
 ## Direct calls without a model
 
 Each command makes one asynchronous API query:
