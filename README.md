@@ -1,8 +1,9 @@
 # langchain-flashdata
 
-[FlashData](https://flashdata.dev) tools for Google Search, YouTube video search,
-video metadata, and transcripts. Give LangChain and LangGraph agents current web
-and video data with source URLs and timestamped captions.
+Google Search, News, Images, Shopping, Videos and Places; YouTube search,
+metadata, transcripts, captions, license labels, channel data, autocomplete and
+media delivery for LangChain and LangGraph. Each task has a source-specific
+Python tool and a [runnable guide](https://github.com/flashdata-dev/langchain-flashdata/blob/main/docs/tools/README.md).
 
 This package is maintained by FlashData. It implements LangChain's `BaseTool` and
 `BaseToolkit` interfaces with synchronous and native asynchronous HTTP calls.
@@ -23,7 +24,7 @@ sources you need, and provide it through your environment:
 export FLASHDATA_API_KEY='YOUR_FLASHDATA_API_KEY'
 ```
 
-Queries consume FlashData credits. Check [current pricing](https://flashdata.dev/pricing)
+**The MIT package is free to install. FlashData API queries are paid and consume credits.** Check [current pricing](https://flashdata.dev/pricing)
 and your account's available credits before running examples. Model provider
 charges are separate.
 
@@ -42,41 +43,54 @@ All tools also accept `api_key="..."` at construction time. Do not put real keys
 in source files. Credentials are excluded from model-facing argument schemas
 and tool serialization.
 
-## Tools and parameters
+## Choose a task
 
-| Class | Tool name | Required input | Optional parameters |
-| --- | --- | --- | --- |
-| `FlashDataGoogleSearch` | `flashdata_google_search` | `query` | `num=10` (1–100), `page=1` (1–100), `autocorrect=True`, `gl`, `hl`, `location`, `tbs` |
-| `FlashDataYouTubeSearch` | `flashdata_youtube_search` | `query` | `max_results=10` (1–20) |
-| `FlashDataYouTubeMetadata` | `flashdata_youtube_metadata` | `video_id` | `include_chapters=True`, `include_formats=True` |
-| `FlashDataYouTubeTranscript` | `flashdata_youtube_transcript` | `video_id` | `language="en"`, `auto=True` |
+Version 0.2.0 supports all 15 FlashData sources. Each class sends only its named
+source; importing a single class does not give an agent the other query tools.
 
-Queries must contain 1–2,000 characters after trimming. `gl` is a two-letter country
-code; `hl` and `language` accept language codes; `location` and `tbs` accept up to
-200 characters. A video input accepts an 11-character ID or a YouTube watch,
-shorts, embed, live, or `youtu.be` URL. Only the video ID is sent to FlashData.
+| Capability | Class | Inputs and result guide |
+| --- | --- | --- |
+| Google Search | `FlashDataGoogleSearch` | [Find citable web results for an agent](https://github.com/flashdata-dev/langchain-flashdata/blob/main/docs/tools/google_search.md) |
+| Google News | `FlashDataGoogleNews` | [Build a topic briefing with publisher links](https://github.com/flashdata-dev/langchain-flashdata/blob/main/docs/tools/google_news.md) |
+| Google Images | `FlashDataGoogleImages` | [Find image candidates with source pages](https://github.com/flashdata-dev/langchain-flashdata/blob/main/docs/tools/google_images.md) |
+| Google Shopping | `FlashDataGoogleShopping` | [Compare merchant result snapshots](https://github.com/flashdata-dev/langchain-flashdata/blob/main/docs/tools/google_shopping.md) |
+| Google Video Search | `FlashDataGoogleVideos` | [Discover video pages across websites](https://github.com/flashdata-dev/langchain-flashdata/blob/main/docs/tools/google_videos.md) |
+| Google Places | `FlashDataGooglePlaces` | [Find local business candidates](https://github.com/flashdata-dev/langchain-flashdata/blob/main/docs/tools/google_places.md) |
+| YouTube Search | `FlashDataYouTubeSearch` | [Shortlist videos by topic](https://github.com/flashdata-dev/langchain-flashdata/blob/main/docs/tools/youtube_search.md) |
+| YouTube Extended Search | `FlashDataYouTubeExtendedSearch` | [Collect a larger video discovery set](https://github.com/flashdata-dev/langchain-flashdata/blob/main/docs/tools/youtube_search_extended.md) |
+| YouTube Video Metadata | `FlashDataYouTubeMetadata` | [Inspect a video before deeper processing](https://github.com/flashdata-dev/langchain-flashdata/blob/main/docs/tools/youtube_metadata.md) |
+| YouTube Transcript | `FlashDataYouTubeTranscript` | [Build timestamped transcript evidence](https://github.com/flashdata-dev/langchain-flashdata/blob/main/docs/tools/youtube_transcript.md) |
+| YouTube Captions | `FlashDataYouTubeCaptions` | [Read the uploader-provided caption track](https://github.com/flashdata-dev/langchain-flashdata/blob/main/docs/tools/youtube_captions.md) |
+| YouTube License Metadata | `FlashDataYouTubeTrainability` | [Inspect the Creative Commons label](https://github.com/flashdata-dev/langchain-flashdata/blob/main/docs/tools/youtube_trainability.md) |
+| YouTube Channel Data | `FlashDataYouTubeChannel` | [Snapshot a channel and recent uploads](https://github.com/flashdata-dev/langchain-flashdata/blob/main/docs/tools/youtube_channel.md) |
+| YouTube Autocomplete | `FlashDataYouTubeSuggestions` | [Explore phrasing before video search](https://github.com/flashdata-dev/langchain-flashdata/blob/main/docs/tools/youtube_suggestions.md) |
+| YouTube Download | `FlashDataYouTubeDownload` | [Deliver video or audio to customer storage](https://github.com/flashdata-dev/langchain-flashdata/blob/main/docs/tools/youtube_download.md) |
 
-For transcripts, `auto=False` requests manually authored captions and `auto=True`
-requests automatic captions. There is no automatic language or caption fallback.
+Two additional tools, `FlashDataDownloadJob` and `FlashDataDownloadResult`, read
+existing download jobs. Download submission is asynchronous and requires
+`FLASHDATA_DOWNLOAD_STORAGE` JSON in the application environment. Storage credentials
+are excluded from model-facing schemas. See the download guide before enabling it.
+
+The original four classes and `FlashDataToolkit()` behavior remain compatible.
+The default toolkit still returns Google Search, YouTube Search, Metadata and
+Transcript. Select the needed sources explicitly for other workflows:
 
 ```python
-import asyncio
-from langchain_flashdata import FlashDataYouTubeTranscript
+from langchain_flashdata import FlashDataToolkit
 
-
-async def main():
-    result = await FlashDataYouTubeTranscript().ainvoke(
-        {
-            "video_id": "https://youtu.be/dQw4w9WgXcQ",
-            "language": "en",
-            "auto": False,
-        }
-    )
-    print(result["results"][0]["segments"])
-
-
-asyncio.run(main())
+tools = FlashDataToolkit(sources=("google_news", "youtube_captions")).get_tools()
 ```
+
+Selecting `youtube_download` adds its two readers and requires storage configuration.
+Google Search retains `num=10`, `page=1`, `autocorrect=True`; the five other Google
+tools omit unset options so the provider chooses its behavior. YouTube Search
+retains a default of 10 (maximum 20); Extended Search defaults to 20 (maximum 700)
+and uses a separate source/rate. Requested counts are not guaranteed.
+
+Transcript defaults to automatic captions; Captions defaults to uploader captions.
+Both select English by default, read existing tracks, and never generate, translate
+or fall back. License Metadata inspects Creative Commons labels and does not grant
+training permission. See each guide for input constraints and exact output fields.
 
 ## Use with a LangChain / LangGraph agent
 
@@ -148,8 +162,8 @@ are not used.
 
 You can also connect LangChain to the existing hosted MCP endpoint at
 `https://data.flashdata.dev/mcp` using the `X-API-Key` header. The native Python
-tools above cover four query operations; the MCP catalog also contains account
-and job operations and varies with key scopes. See [hosted_mcp.py](https://github.com/flashdata-dev/langchain-flashdata/blob/main/examples/hosted_mcp.py).
+tools above cover all 15 sources; the MCP catalog also contains account operations
+and varies with key scopes. See [hosted_mcp.py](https://github.com/flashdata-dev/langchain-flashdata/blob/main/examples/hosted_mcp.py).
 The example uses the current `langchain[mcp]` API, which LangChain labels beta.
 
 ## Development

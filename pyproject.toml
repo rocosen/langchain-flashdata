@@ -4,8 +4,8 @@ build-backend = "hatchling.build"
 
 [project]
 name = "langchain-flashdata"
-version = "0.1.1"
-description = "FlashData Google Search and YouTube tools for LangChain and LangGraph"
+version = "0.2.0"
+description = "Google search, news, images, places and YouTube data/download tools for LangChain"
 readme = "README.md"
 requires-python = ">=3.10,<4.0"
 license = "MIT"
@@ -26,6 +26,7 @@ dependencies = [
   "langchain-core>=1.6.9,<2",
   "httpx>=0.28.1,<1",
   "pydantic>=2.7.4,<3",
+  "jsonschema>=4.23,<5",
 ]
 
 [project.urls]

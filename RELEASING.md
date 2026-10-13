@@ -3,7 +3,8 @@
 Source publication, PyPI publication, a LangChain listing request, and acceptance
 into the official directory are separate milestones. PyPI publication uses the
 configured GitHub Trusted Publisher. Version 0.1.0 was first published on
-2026-10-09; version 0.1.1 updates the published installation documentation.
+2026-10-09; version 0.1.1 updated installation documentation. Version 0.2.0 adds
+all 15 source-specific tools, download readers and task guides.
 
 ## Verify the release
 
@@ -44,7 +45,7 @@ this package; it is not an npm or GitHub login.
 
 For each release, update the version in `pyproject.toml`, `uv.lock`, and the
 package user agent, then verify the release and merge its changes. Tag the
-verified main commit (for example `v0.1.1`), push the tag,
+verified main commit (for example `v0.2.0`), push the tag,
 and manually run **Publish to PyPI** with that tag selected. The workflow checks
 that the tag matches the package version, tests, builds, and publishes exactly the
 built wheel and source archive. It will not publish from a branch. Do not overwrite
@@ -58,8 +59,12 @@ documentation links before building, because released metadata is immutable.
 
 ## LangChain official listing
 
-After PyPI publication, use the [official Integration listing form](https://github.com/langchain-ai/docs/issues/new?template=06-integration-submission.yml).
-The prepared form body is [docs/langchain-listing.md](docs/langchain-listing.md).
+The original toolkit listing is already merged in official docs PR #6577. Do not
+submit another first-time toolkit application. For newly implemented source-specific
+classes, after PyPI publication use the [official Integration listing form](https://github.com/langchain-ai/docs/issues/new?template=06-integration-submission.yml).
+Use the class, display name and distinct guide URL in
+[docs/tasks.json](docs/tasks.json) for each source-specific request. The original
+[toolkit form](docs/langchain-listing.md) is retained only as a historical record.
 Check the published-package confirmation only after PyPI has been verified.
 
 A maintainer applies `integration-run`; the automation creates the documentation
@@ -69,4 +74,4 @@ than a full guide hosted by LangChain. Monitor the same issue/PR for feedback;
 do not repeatedly tag maintainers or create duplicate submissions.
 
 The authoritative process is [Publish an integration](https://docs.langchain.com/oss/python/contributing/publish-langchain),
-verified on 2026-10-09. Verify it again before submitting if the process changes.
+verified on 2026-10-13. Verify it again before submitting if the process changes.
