@@ -31,9 +31,9 @@ dependencies = [
 
 [project.urls]
 Homepage = "https://flashdata.dev"
-Documentation = "https://github.com/flashdata-dev/langchain-flashdata#readme"
-Repository = "https://github.com/flashdata-dev/langchain-flashdata"
-Issues = "https://github.com/flashdata-dev/langchain-flashdata/issues"
+Documentation = "https://github.com/rocosen/langchain-flashdata#readme"
+Repository = "https://github.com/rocosen/langchain-flashdata"
+Issues = "https://github.com/rocosen/langchain-flashdata/issues"
 
 [project.optional-dependencies]
 examples = ["langchain>=1.4.4,<2", "langchain-openai>=1.7.0,<2"]

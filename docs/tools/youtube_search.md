@@ -4,7 +4,7 @@ Find a small set of YouTube videos for a tutorial or research question. Start wi
 
 **Task:** Shortlist videos by topic. This tool calls only `youtube_search` through `FlashDataYouTubeSearch` in `langchain-flashdata` 0.2.0.
 
-[YouTube Search API fields and limits](https://flashdata.dev/docs/sources/youtube_search?utm_source=langchain&utm_medium=integration&utm_campaign=intent_gtm_2026q4&utm_content=youtube_search-tool) · [API pricing](https://flashdata.dev/pricing) · [All task guides](https://github.com/flashdata-dev/langchain-flashdata/blob/main/docs/tools/README.md)
+[YouTube Search API fields and limits](https://flashdata.dev/docs/sources/youtube_search?utm_source=langchain&utm_medium=integration&utm_campaign=intent_gtm_2026q4&utm_content=youtube_search-tool) · [API pricing](https://flashdata.dev/pricing) · [All task guides](https://github.com/rocosen/langchain-flashdata/blob/main/docs/tools/README.md)
 
 ## Install and authenticate
 
@@ -31,7 +31,7 @@ for item in result["results"][0].get("results", []):
     print(item.get("videoId"), item.get("title"), item.get("channel"))
 ```
 
-[Runnable script](https://github.com/flashdata-dev/langchain-flashdata/blob/main/examples/tasks/youtube_search.py). All data tools support `await tool.ainvoke(arguments)` in an async function with the same inputs and response contract. Queries are trimmed and limited to 1–2,000 characters. Video tools accept an 11-character ID or a supported YouTube URL and send only the ID.
+[Runnable script](https://github.com/rocosen/langchain-flashdata/blob/main/examples/tasks/youtube_search.py). All data tools support `await tool.ainvoke(arguments)` in an async function with the same inputs and response contract. Queries are trimmed and limited to 1–2,000 characters. Video tools accept an 11-character ID or a supported YouTube URL and send only the ID.
 
 ## Interpret the output
 
@@ -89,4 +89,4 @@ Search filters support `upload_date` (today/last_hour/this_week/this_month/this_
 
 Inputs are validated before submission. Realtime calls return the complete API envelope, including available usage fields. No paid request is retried automatically. If a timeout or broken response leaves the outcome unknown, check FlashData Jobs before submitting again. Do not add automatic retries or graph replay around paid tool calls. An unavailable optional field should remain unknown.
 
-See [YouTube Search documentation](https://flashdata.dev/docs/sources/youtube_search?utm_source=langchain&utm_medium=integration&utm_campaign=intent_gtm_2026q4&utm_content=youtube_search-tool) for the current contract, [data handling](https://github.com/flashdata-dev/langchain-flashdata/blob/main/PRIVACY.md) for credential and result flow, or contact support@flashdata.dev.
+See [YouTube Search documentation](https://flashdata.dev/docs/sources/youtube_search?utm_source=langchain&utm_medium=integration&utm_campaign=intent_gtm_2026q4&utm_content=youtube_search-tool) for the current contract, [data handling](https://github.com/rocosen/langchain-flashdata/blob/main/PRIVACY.md) for credential and result flow, or contact support@flashdata.dev.

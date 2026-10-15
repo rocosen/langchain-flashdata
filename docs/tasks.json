@@ -12,7 +12,7 @@
       "hl": "en"
     },
     "description": "Search Google for current web results, titles, snippets and source URLs. Uses FlashData credits. Do not repeat a query after an unknown outcome; check Jobs first.",
-    "docs_url": "https://github.com/flashdata-dev/langchain-flashdata/blob/main/docs/tools/google_search.md",
+    "docs_url": "https://github.com/rocosen/langchain-flashdata/blob/main/docs/tools/google_search.md",
     "website_url": "https://flashdata.dev/docs/sources/google_search?utm_source=langchain&utm_medium=integration&utm_campaign=intent_gtm_2026q4&utm_content=google_search-tool",
     "prompt": "Find three current sources about LangGraph durable execution using Google Search. Cite their URLs and distinguish snippets from full-page evidence."
   },
@@ -30,7 +30,7 @@
       "num": 5
     },
     "description": "Search Google News by topic, country, language and time filter. Returns headlines, links, publishers and available dates/snippets, not article full text. Uses FlashData credits.",
-    "docs_url": "https://github.com/flashdata-dev/langchain-flashdata/blob/main/docs/tools/google_news.md",
+    "docs_url": "https://github.com/rocosen/langchain-flashdata/blob/main/docs/tools/google_news.md",
     "website_url": "https://flashdata.dev/docs/sources/google_news?utm_source=langchain&utm_medium=integration&utm_campaign=intent_gtm_2026q4&utm_content=google_news-tool",
     "prompt": "Search Google News for semiconductor manufacturing in the past day. Produce a short briefing with publisher names and article links; do not invent article details."
   },
@@ -45,7 +45,7 @@
       "num": 5
     },
     "description": "Search Google Images for image URLs, thumbnails, dimensions and source pages. Does not download images or grant reuse rights. Uses FlashData credits.",
-    "docs_url": "https://github.com/flashdata-dev/langchain-flashdata/blob/main/docs/tools/google_images.md",
+    "docs_url": "https://github.com/rocosen/langchain-flashdata/blob/main/docs/tools/google_images.md",
     "website_url": "https://flashdata.dev/docs/sources/google_images?utm_source=langchain&utm_medium=integration&utm_campaign=intent_gtm_2026q4&utm_content=google_images-tool",
     "prompt": "Find five solar panel installation diagrams with Google Images. List source pages and any available dimensions, without claiming reuse rights."
   },
@@ -61,7 +61,7 @@
       "num": 5
     },
     "description": "Search Google Shopping for products, merchants and available price/rating fields. A search snapshot does not guarantee stock or checkout price. Uses FlashData credits.",
-    "docs_url": "https://github.com/flashdata-dev/langchain-flashdata/blob/main/docs/tools/google_shopping.md",
+    "docs_url": "https://github.com/rocosen/langchain-flashdata/blob/main/docs/tools/google_shopping.md",
     "website_url": "https://flashdata.dev/docs/sources/google_shopping?utm_source=langchain&utm_medium=integration&utm_campaign=intent_gtm_2026q4&utm_content=google_shopping-tool",
     "prompt": "Compare five USB-C docking station listings from Google Shopping. Show the displayed price and merchant link, and mark missing values rather than estimating."
   },
@@ -76,7 +76,7 @@
       "num": 5
     },
     "description": "Search Google Videos across websites for video titles, links and available durations and source information. Different from YouTube-only search. Uses FlashData credits.",
-    "docs_url": "https://github.com/flashdata-dev/langchain-flashdata/blob/main/docs/tools/google_videos.md",
+    "docs_url": "https://github.com/rocosen/langchain-flashdata/blob/main/docs/tools/google_videos.md",
     "website_url": "https://flashdata.dev/docs/sources/google_videos?utm_source=langchain&utm_medium=integration&utm_campaign=intent_gtm_2026q4&utm_content=google_videos-tool",
     "prompt": "Use Google Video Search to find battery recycling demonstrations across websites. Return links with the available duration and hosting site."
   },
@@ -92,7 +92,7 @@
       "num": 5
     },
     "description": "Search Google Places for local businesses, addresses, coordinates and available ratings or contact details. Phone numbers may be absent. Uses FlashData credits.",
-    "docs_url": "https://github.com/flashdata-dev/langchain-flashdata/blob/main/docs/tools/google_places.md",
+    "docs_url": "https://github.com/rocosen/langchain-flashdata/blob/main/docs/tools/google_places.md",
     "website_url": "https://flashdata.dev/docs/sources/google_places?utm_source=langchain&utm_medium=integration&utm_campaign=intent_gtm_2026q4&utm_content=google_places-tool",
     "prompt": "Find five coffee shops in Cambridge, UK using Google Places. Show reported addresses and websites, and mark missing fields."
   },
@@ -111,7 +111,7 @@
       }
     },
     "description": "Find YouTube videos by search query. Returns video IDs and available video metadata. Uses FlashData credits. Do not repeat a query after an unknown outcome; check Jobs first.",
-    "docs_url": "https://github.com/flashdata-dev/langchain-flashdata/blob/main/docs/tools/youtube_search.md",
+    "docs_url": "https://github.com/rocosen/langchain-flashdata/blob/main/docs/tools/youtube_search.md",
     "website_url": "https://flashdata.dev/docs/sources/youtube_search?utm_source=langchain&utm_medium=integration&utm_campaign=intent_gtm_2026q4&utm_content=youtube_search-tool",
     "prompt": "Find five YouTube tutorials about LangGraph with subtitles. List video IDs and channels, and explain that transcript language availability still needs checking."
   },
@@ -131,7 +131,7 @@
       }
     },
     "description": "Search YouTube with an extended limit of up to 700 requested results and optional filters. Actual count may be lower. Uses a separate FlashData source and credit rate.",
-    "docs_url": "https://github.com/flashdata-dev/langchain-flashdata/blob/main/docs/tools/youtube_search_extended.md",
+    "docs_url": "https://github.com/rocosen/langchain-flashdata/blob/main/docs/tools/youtube_search_extended.md",
     "website_url": "https://flashdata.dev/docs/sources/youtube_search_extended?utm_source=langchain&utm_medium=integration&utm_campaign=intent_gtm_2026q4&utm_content=youtube_search_extended-tool",
     "prompt": "Use YouTube Extended Search to collect up to 50 urban farming videos from this month, ordered by view count. Report the actual returned count."
   },
@@ -147,7 +147,7 @@
       "include_formats": false
     },
     "description": "Get YouTube video metadata by ID or URL, with optional chapters and format metadata. Uses FlashData credits. Do not repeat a query after an unknown outcome; check Jobs first.",
-    "docs_url": "https://github.com/flashdata-dev/langchain-flashdata/blob/main/docs/tools/youtube_metadata.md",
+    "docs_url": "https://github.com/rocosen/langchain-flashdata/blob/main/docs/tools/youtube_metadata.md",
     "website_url": "https://flashdata.dev/docs/sources/youtube_metadata?utm_source=langchain&utm_medium=integration&utm_campaign=intent_gtm_2026q4&utm_content=youtube_metadata-tool",
     "prompt": "Inspect the metadata and available chapters for the supplied YouTube video. List caption languages if present and avoid inventing missing chapters."
   },
@@ -163,7 +163,7 @@
       "auto": true
     },
     "description": "Get a YouTube transcript with timestamped segments by video ID or URL. Specify language and auto=true for automatic captions or auto=false for manual captions. No implicit fallback. Uses FlashData credits. Do not repeat a query after an unknown outcome; check Jobs first.",
-    "docs_url": "https://github.com/flashdata-dev/langchain-flashdata/blob/main/docs/tools/youtube_transcript.md",
+    "docs_url": "https://github.com/rocosen/langchain-flashdata/blob/main/docs/tools/youtube_transcript.md",
     "website_url": "https://flashdata.dev/docs/sources/youtube_transcript?utm_source=langchain&utm_medium=integration&utm_campaign=intent_gtm_2026q4&utm_content=youtube_transcript-tool",
     "prompt": "Read the automatic English transcript of the supplied video. Summarize its main points with segment timestamps; stop if the requested track is unavailable."
   },
@@ -179,7 +179,7 @@
       "auto": false
     },
     "description": "Retrieve YouTube captions with timestamped segments. Defaults to manual uploader captions (auto=false), language en. No transcription, translation or automatic fallback. Uses FlashData credits.",
-    "docs_url": "https://github.com/flashdata-dev/langchain-flashdata/blob/main/docs/tools/youtube_captions.md",
+    "docs_url": "https://github.com/rocosen/langchain-flashdata/blob/main/docs/tools/youtube_captions.md",
     "website_url": "https://flashdata.dev/docs/sources/youtube_captions?utm_source=langchain&utm_medium=integration&utm_campaign=intent_gtm_2026q4&utm_content=youtube_captions-tool",
     "prompt": "Retrieve the uploader-provided English captions for the supplied YouTube video. Report timestamped text and do not fall back to automatic captions."
   },
@@ -193,7 +193,7 @@
       "video_id": "dQw4w9WgXcQ"
     },
     "description": "Inspect YouTube license metadata for a Creative Commons label. The trainability source does not read creator training settings or grant training permission. Uses FlashData credits.",
-    "docs_url": "https://github.com/flashdata-dev/langchain-flashdata/blob/main/docs/tools/youtube_trainability.md",
+    "docs_url": "https://github.com/rocosen/langchain-flashdata/blob/main/docs/tools/youtube_trainability.md",
     "website_url": "https://flashdata.dev/docs/sources/youtube_trainability?utm_source=langchain&utm_medium=integration&utm_campaign=intent_gtm_2026q4&utm_content=youtube_trainability-tool",
     "prompt": "Inspect the license metadata for the supplied video. Explain only whether a Creative Commons label was detected; do not claim training permission."
   },
@@ -208,7 +208,7 @@
       "video_limit": 5
     },
     "description": "Get YouTube channel data by handle and up to 100 requested recent videos. Statistics and some fields may be unavailable. Uses FlashData credits.",
-    "docs_url": "https://github.com/flashdata-dev/langchain-flashdata/blob/main/docs/tools/youtube_channel.md",
+    "docs_url": "https://github.com/rocosen/langchain-flashdata/blob/main/docs/tools/youtube_channel.md",
     "website_url": "https://flashdata.dev/docs/sources/youtube_channel?utm_source=langchain&utm_medium=integration&utm_campaign=intent_gtm_2026q4&utm_content=youtube_channel-tool",
     "prompt": "Snapshot @jawed with up to five recent videos. Distinguish channel statistics from the returned sample and mark unavailable counts."
   },
@@ -224,7 +224,7 @@
       "region": "US"
     },
     "description": "Get YouTube autocomplete suggestions for a query prefix, language and region. Returns phrases, not videos or search-volume estimates. Uses FlashData credits.",
-    "docs_url": "https://github.com/flashdata-dev/langchain-flashdata/blob/main/docs/tools/youtube_suggestions.md",
+    "docs_url": "https://github.com/rocosen/langchain-flashdata/blob/main/docs/tools/youtube_suggestions.md",
     "website_url": "https://flashdata.dev/docs/sources/youtube_suggestions?utm_source=langchain&utm_medium=integration&utm_campaign=intent_gtm_2026q4&utm_content=youtube_suggestions-tool",
     "prompt": "Get YouTube autocomplete suggestions for python async in English and the US region. Present the phrases without assigning search-volume estimates."
   },
@@ -243,7 +243,7 @@
       "end_at": "00:00:10"
     },
     "description": "Submit a paid YouTube video/audio download to configured customer cloud storage. Returns an asynchronous job ID, not a completed file. Save the ID and use download job readers; never resubmit just because it is pending. Billed on delivered bytes.",
-    "docs_url": "https://github.com/flashdata-dev/langchain-flashdata/blob/main/docs/tools/youtube_download.md",
+    "docs_url": "https://github.com/rocosen/langchain-flashdata/blob/main/docs/tools/youtube_download.md",
     "website_url": "https://flashdata.dev/docs/sources/youtube_download?utm_source=langchain&utm_medium=integration&utm_campaign=intent_gtm_2026q4&utm_content=youtube_download-tool",
     "prompt": "For the authorized video, submit one ten-second MP3 clip to the configured destination. Save the job ID; use only the readers while it is pending, and never submit it again merely to check progress."
   }

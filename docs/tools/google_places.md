@@ -4,7 +4,7 @@ Build a shortlist of local businesses from a geographic query. Return the report
 
 **Task:** Find local business candidates. This tool calls only `google_places` through `FlashDataGooglePlaces` in `langchain-flashdata` 0.2.0.
 
-[Google Places API fields and limits](https://flashdata.dev/docs/sources/google_places?utm_source=langchain&utm_medium=integration&utm_campaign=intent_gtm_2026q4&utm_content=google_places-tool) · [API pricing](https://flashdata.dev/pricing) · [All task guides](https://github.com/flashdata-dev/langchain-flashdata/blob/main/docs/tools/README.md)
+[Google Places API fields and limits](https://flashdata.dev/docs/sources/google_places?utm_source=langchain&utm_medium=integration&utm_campaign=intent_gtm_2026q4&utm_content=google_places-tool) · [API pricing](https://flashdata.dev/pricing) · [All task guides](https://github.com/rocosen/langchain-flashdata/blob/main/docs/tools/README.md)
 
 ## Install and authenticate
 
@@ -27,7 +27,7 @@ for item in result["results"][0].get("places", []):
     print(item.get("title"), item.get("address"), item.get("rating"), item.get("website"))
 ```
 
-[Runnable script](https://github.com/flashdata-dev/langchain-flashdata/blob/main/examples/tasks/google_places.py). All data tools support `await tool.ainvoke(arguments)` in an async function with the same inputs and response contract. Queries are trimmed and limited to 1–2,000 characters. Video tools accept an 11-character ID or a supported YouTube URL and send only the ID.
+[Runnable script](https://github.com/rocosen/langchain-flashdata/blob/main/examples/tasks/google_places.py). All data tools support `await tool.ainvoke(arguments)` in an async function with the same inputs and response contract. Queries are trimmed and limited to 1–2,000 characters. Video tools accept an 11-character ID or a supported YouTube URL and send only the ID.
 
 ## Interpret the output
 
@@ -84,4 +84,4 @@ Optional Google settings: `gl` is a two-letter country, `hl` a language code, `l
 
 Inputs are validated before submission. Realtime calls return the complete API envelope, including available usage fields. No paid request is retried automatically. If a timeout or broken response leaves the outcome unknown, check FlashData Jobs before submitting again. Do not add automatic retries or graph replay around paid tool calls. An unavailable optional field should remain unknown.
 
-See [Google Places documentation](https://flashdata.dev/docs/sources/google_places?utm_source=langchain&utm_medium=integration&utm_campaign=intent_gtm_2026q4&utm_content=google_places-tool) for the current contract, [data handling](https://github.com/flashdata-dev/langchain-flashdata/blob/main/PRIVACY.md) for credential and result flow, or contact support@flashdata.dev.
+See [Google Places documentation](https://flashdata.dev/docs/sources/google_places?utm_source=langchain&utm_medium=integration&utm_campaign=intent_gtm_2026q4&utm_content=google_places-tool) for the current contract, [data handling](https://github.com/rocosen/langchain-flashdata/blob/main/PRIVACY.md) for credential and result flow, or contact support@flashdata.dev.

@@ -3,7 +3,7 @@
 Google Search, News, Images, Shopping, Videos and Places; YouTube search,
 metadata, transcripts, captions, license labels, channel data, autocomplete and
 media delivery for LangChain and LangGraph. Each task has a source-specific
-Python tool and a [runnable guide](https://github.com/flashdata-dev/langchain-flashdata/blob/main/docs/tools/README.md).
+Python tool and a [runnable guide](https://github.com/rocosen/langchain-flashdata/blob/main/docs/tools/README.md).
 
 This package is maintained by FlashData. It implements LangChain's `BaseTool` and
 `BaseToolkit` interfaces with synchronous and native asynchronous HTTP calls.
@@ -50,21 +50,21 @@ source; importing a single class does not give an agent the other query tools.
 
 | Capability | Class | Inputs and result guide |
 | --- | --- | --- |
-| Google Search | `FlashDataGoogleSearch` | [Find citable web results for an agent](https://github.com/flashdata-dev/langchain-flashdata/blob/main/docs/tools/google_search.md) |
-| Google News | `FlashDataGoogleNews` | [Build a topic briefing with publisher links](https://github.com/flashdata-dev/langchain-flashdata/blob/main/docs/tools/google_news.md) |
-| Google Images | `FlashDataGoogleImages` | [Find image candidates with source pages](https://github.com/flashdata-dev/langchain-flashdata/blob/main/docs/tools/google_images.md) |
-| Google Shopping | `FlashDataGoogleShopping` | [Compare merchant result snapshots](https://github.com/flashdata-dev/langchain-flashdata/blob/main/docs/tools/google_shopping.md) |
-| Google Video Search | `FlashDataGoogleVideos` | [Discover video pages across websites](https://github.com/flashdata-dev/langchain-flashdata/blob/main/docs/tools/google_videos.md) |
-| Google Places | `FlashDataGooglePlaces` | [Find local business candidates](https://github.com/flashdata-dev/langchain-flashdata/blob/main/docs/tools/google_places.md) |
-| YouTube Search | `FlashDataYouTubeSearch` | [Shortlist videos by topic](https://github.com/flashdata-dev/langchain-flashdata/blob/main/docs/tools/youtube_search.md) |
-| YouTube Extended Search | `FlashDataYouTubeExtendedSearch` | [Collect a larger video discovery set](https://github.com/flashdata-dev/langchain-flashdata/blob/main/docs/tools/youtube_search_extended.md) |
-| YouTube Video Metadata | `FlashDataYouTubeMetadata` | [Inspect a video before deeper processing](https://github.com/flashdata-dev/langchain-flashdata/blob/main/docs/tools/youtube_metadata.md) |
-| YouTube Transcript | `FlashDataYouTubeTranscript` | [Build timestamped transcript evidence](https://github.com/flashdata-dev/langchain-flashdata/blob/main/docs/tools/youtube_transcript.md) |
-| YouTube Captions | `FlashDataYouTubeCaptions` | [Read the uploader-provided caption track](https://github.com/flashdata-dev/langchain-flashdata/blob/main/docs/tools/youtube_captions.md) |
-| YouTube License Metadata | `FlashDataYouTubeTrainability` | [Inspect the Creative Commons label](https://github.com/flashdata-dev/langchain-flashdata/blob/main/docs/tools/youtube_trainability.md) |
-| YouTube Channel Data | `FlashDataYouTubeChannel` | [Snapshot a channel and recent uploads](https://github.com/flashdata-dev/langchain-flashdata/blob/main/docs/tools/youtube_channel.md) |
-| YouTube Autocomplete | `FlashDataYouTubeSuggestions` | [Explore phrasing before video search](https://github.com/flashdata-dev/langchain-flashdata/blob/main/docs/tools/youtube_suggestions.md) |
-| YouTube Download | `FlashDataYouTubeDownload` | [Deliver video or audio to customer storage](https://github.com/flashdata-dev/langchain-flashdata/blob/main/docs/tools/youtube_download.md) |
+| Google Search | `FlashDataGoogleSearch` | [Find citable web results for an agent](https://github.com/rocosen/langchain-flashdata/blob/main/docs/tools/google_search.md) |
+| Google News | `FlashDataGoogleNews` | [Build a topic briefing with publisher links](https://github.com/rocosen/langchain-flashdata/blob/main/docs/tools/google_news.md) |
+| Google Images | `FlashDataGoogleImages` | [Find image candidates with source pages](https://github.com/rocosen/langchain-flashdata/blob/main/docs/tools/google_images.md) |
+| Google Shopping | `FlashDataGoogleShopping` | [Compare merchant result snapshots](https://github.com/rocosen/langchain-flashdata/blob/main/docs/tools/google_shopping.md) |
+| Google Video Search | `FlashDataGoogleVideos` | [Discover video pages across websites](https://github.com/rocosen/langchain-flashdata/blob/main/docs/tools/google_videos.md) |
+| Google Places | `FlashDataGooglePlaces` | [Find local business candidates](https://github.com/rocosen/langchain-flashdata/blob/main/docs/tools/google_places.md) |
+| YouTube Search | `FlashDataYouTubeSearch` | [Shortlist videos by topic](https://github.com/rocosen/langchain-flashdata/blob/main/docs/tools/youtube_search.md) |
+| YouTube Extended Search | `FlashDataYouTubeExtendedSearch` | [Collect a larger video discovery set](https://github.com/rocosen/langchain-flashdata/blob/main/docs/tools/youtube_search_extended.md) |
+| YouTube Video Metadata | `FlashDataYouTubeMetadata` | [Inspect a video before deeper processing](https://github.com/rocosen/langchain-flashdata/blob/main/docs/tools/youtube_metadata.md) |
+| YouTube Transcript | `FlashDataYouTubeTranscript` | [Build timestamped transcript evidence](https://github.com/rocosen/langchain-flashdata/blob/main/docs/tools/youtube_transcript.md) |
+| YouTube Captions | `FlashDataYouTubeCaptions` | [Read the uploader-provided caption track](https://github.com/rocosen/langchain-flashdata/blob/main/docs/tools/youtube_captions.md) |
+| YouTube License Metadata | `FlashDataYouTubeTrainability` | [Inspect the Creative Commons label](https://github.com/rocosen/langchain-flashdata/blob/main/docs/tools/youtube_trainability.md) |
+| YouTube Channel Data | `FlashDataYouTubeChannel` | [Snapshot a channel and recent uploads](https://github.com/rocosen/langchain-flashdata/blob/main/docs/tools/youtube_channel.md) |
+| YouTube Autocomplete | `FlashDataYouTubeSuggestions` | [Explore phrasing before video search](https://github.com/rocosen/langchain-flashdata/blob/main/docs/tools/youtube_suggestions.md) |
+| YouTube Download | `FlashDataYouTubeDownload` | [Deliver video or audio to customer storage](https://github.com/rocosen/langchain-flashdata/blob/main/docs/tools/youtube_download.md) |
 
 Two additional tools, `FlashDataDownloadJob` and `FlashDataDownloadResult`, read
 existing download jobs. Download submission is asynchronous and requires
@@ -94,12 +94,12 @@ training permission. See each guide for input constraints and exact output field
 
 ## Use with a LangChain / LangGraph agent
 
-The [research example](https://github.com/flashdata-dev/langchain-flashdata/blob/main/examples/research_agent.py) uses `create_agent`, which runs
+The [research example](https://github.com/rocosen/langchain-flashdata/blob/main/examples/research_agent.py) uses `create_agent`, which runs
 on LangGraph. The model chooses tools and arguments from the question. A tool call
 limit bounds the number of queries; it does not set a credit or dollar limit.
 
 ```bash
-git clone https://github.com/flashdata-dev/langchain-flashdata.git
+git clone https://github.com/rocosen/langchain-flashdata.git
 cd langchain-flashdata
 pip install '.[examples]'
 export OPENAI_API_KEY='YOUR_MODEL_PROVIDER_KEY'
@@ -129,7 +129,7 @@ tools = FlashDataToolkit().get_tools()
 tool_node = ToolNode(tools, handle_tool_errors=False)
 ```
 
-See [the examples guide](https://github.com/flashdata-dev/langchain-flashdata/blob/main/examples/README.md) for direct tool calls, transcript
+See [the examples guide](https://github.com/rocosen/langchain-flashdata/blob/main/examples/README.md) for direct tool calls, transcript
 research, and the hosted MCP alternative.
 
 ## Output and errors
@@ -163,7 +163,7 @@ are not used.
 You can also connect LangChain to the existing hosted MCP endpoint at
 `https://data.flashdata.dev/mcp` using the `X-API-Key` header. The native Python
 tools above cover all 15 sources; the MCP catalog also contains account operations
-and varies with key scopes. See [hosted_mcp.py](https://github.com/flashdata-dev/langchain-flashdata/blob/main/examples/hosted_mcp.py).
+and varies with key scopes. See [hosted_mcp.py](https://github.com/rocosen/langchain-flashdata/blob/main/examples/hosted_mcp.py).
 The example uses the current `langchain[mcp]` API, which LangChain labels beta.
 
 ## Development
@@ -186,7 +186,7 @@ explicitly with `FLASHDATA_API_KEY` configured:
 FLASHDATA_RUN_LIVE=1 uv run --extra examples pytest tests/integration_tests -q
 ```
 
-Release instructions: [RELEASING.md](https://github.com/flashdata-dev/langchain-flashdata/blob/main/RELEASING.md).
-Data handling: [PRIVACY.md](https://github.com/flashdata-dev/langchain-flashdata/blob/main/PRIVACY.md).
-License: [MIT](https://github.com/flashdata-dev/langchain-flashdata/blob/main/LICENSE).
+Release instructions: [RELEASING.md](https://github.com/rocosen/langchain-flashdata/blob/main/RELEASING.md).
+Data handling: [PRIVACY.md](https://github.com/rocosen/langchain-flashdata/blob/main/PRIVACY.md).
+License: [MIT](https://github.com/rocosen/langchain-flashdata/blob/main/LICENSE).
 Support: [support@flashdata.dev](mailto:support@flashdata.dev).

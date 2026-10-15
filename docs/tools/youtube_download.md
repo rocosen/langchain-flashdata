@@ -4,7 +4,7 @@ Submit an asynchronous media-delivery job for a video you are authorized to proc
 
 **Task:** Deliver video or audio to customer storage. This tool calls only `youtube_download` through `FlashDataYouTubeDownload` in `langchain-flashdata` 0.2.0.
 
-[YouTube Download API fields and limits](https://flashdata.dev/docs/sources/youtube_download?utm_source=langchain&utm_medium=integration&utm_campaign=intent_gtm_2026q4&utm_content=youtube_download-tool) · [API pricing](https://flashdata.dev/pricing) · [All task guides](https://github.com/flashdata-dev/langchain-flashdata/blob/main/docs/tools/README.md)
+[YouTube Download API fields and limits](https://flashdata.dev/docs/sources/youtube_download?utm_source=langchain&utm_medium=integration&utm_campaign=intent_gtm_2026q4&utm_content=youtube_download-tool) · [API pricing](https://flashdata.dev/pricing) · [All task guides](https://github.com/rocosen/langchain-flashdata/blob/main/docs/tools/README.md)
 
 ## Install and authenticate
 
@@ -33,7 +33,7 @@ result = tool.invoke(arguments)
 print("Save this job ID:", result["id"], "status:", result["status"])
 ```
 
-[Runnable script](https://github.com/flashdata-dev/langchain-flashdata/blob/main/examples/tasks/youtube_download.py). All data tools support `await tool.ainvoke(arguments)` in an async function with the same inputs and response contract. Queries are trimmed and limited to 1–2,000 characters. Video tools accept an 11-character ID or a supported YouTube URL and send only the ID.
+[Runnable script](https://github.com/rocosen/langchain-flashdata/blob/main/examples/tasks/youtube_download.py). All data tools support `await tool.ainvoke(arguments)` in an async function with the same inputs and response contract. Queries are trimmed and limited to 1–2,000 characters. Video tools accept an 11-character ID or a supported YouTube URL and send only the ID.
 
 ## Interpret the output
 
@@ -104,4 +104,4 @@ pending status trigger a second submission. Model-provider fees are separate.
 
 Inputs are validated before submission. Realtime calls return the complete API envelope, including available usage fields. No paid request is retried automatically. If a timeout or broken response leaves the outcome unknown, check FlashData Jobs before submitting again. Do not add automatic retries or graph replay around paid tool calls. An unavailable optional field should remain unknown.
 
-See [YouTube Download documentation](https://flashdata.dev/docs/sources/youtube_download?utm_source=langchain&utm_medium=integration&utm_campaign=intent_gtm_2026q4&utm_content=youtube_download-tool) for the current contract, [data handling](https://github.com/flashdata-dev/langchain-flashdata/blob/main/PRIVACY.md) for credential and result flow, or contact support@flashdata.dev.
+See [YouTube Download documentation](https://flashdata.dev/docs/sources/youtube_download?utm_source=langchain&utm_medium=integration&utm_campaign=intent_gtm_2026q4&utm_content=youtube_download-tool) for the current contract, [data handling](https://github.com/rocosen/langchain-flashdata/blob/main/PRIVACY.md) for credential and result flow, or contact support@flashdata.dev.
