@@ -4,7 +4,7 @@ Use an uploader caption track when an editorial or localization workflow require
 
 **Task:** Read the uploader-provided caption track. This tool calls only `youtube_captions` through `FlashDataYouTubeCaptions` in `langchain-flashdata` 0.2.0.
 
-[YouTube Captions API fields and limits](https://flashdata.dev/docs/sources/youtube_captions?utm_source=langchain&utm_medium=integration&utm_campaign=intent_gtm_2026q4&utm_content=youtube_captions-tool) · [API pricing](https://flashdata.dev/pricing) · [All task guides](https://github.com/flashdata-dev/langchain-flashdata/blob/main/docs/tools/README.md)
+[YouTube Captions API fields and limits](https://flashdata.dev/docs/sources/youtube_captions?utm_source=langchain&utm_medium=integration&utm_campaign=intent_gtm_2026q4&utm_content=youtube_captions-tool) · [API pricing](https://flashdata.dev/pricing) · [All task guides](https://github.com/rocosen/langchain-flashdata/blob/main/docs/tools/README.md)
 
 ## Install and authenticate
 
@@ -29,7 +29,7 @@ for segment in item.get("segments", []):
     print(segment["start"], segment["end"], segment["text"])
 ```
 
-[Runnable script](https://github.com/flashdata-dev/langchain-flashdata/blob/main/examples/tasks/youtube_captions.py). All data tools support `await tool.ainvoke(arguments)` in an async function with the same inputs and response contract. Queries are trimmed and limited to 1–2,000 characters. Video tools accept an 11-character ID or a supported YouTube URL and send only the ID.
+[Runnable script](https://github.com/rocosen/langchain-flashdata/blob/main/examples/tasks/youtube_captions.py). All data tools support `await tool.ainvoke(arguments)` in an async function with the same inputs and response contract. Queries are trimmed and limited to 1–2,000 characters. Video tools accept an 11-character ID or a supported YouTube URL and send only the ID.
 
 ## Interpret the output
 
@@ -86,4 +86,4 @@ For a model-driven agent, pass this same tool to `create_agent`. A useful task p
 
 Inputs are validated before submission. Realtime calls return the complete API envelope, including available usage fields. No paid request is retried automatically. If a timeout or broken response leaves the outcome unknown, check FlashData Jobs before submitting again. Do not add automatic retries or graph replay around paid tool calls. An unavailable optional field should remain unknown.
 
-See [YouTube Captions documentation](https://flashdata.dev/docs/sources/youtube_captions?utm_source=langchain&utm_medium=integration&utm_campaign=intent_gtm_2026q4&utm_content=youtube_captions-tool) for the current contract, [data handling](https://github.com/flashdata-dev/langchain-flashdata/blob/main/PRIVACY.md) for credential and result flow, or contact support@flashdata.dev.
+See [YouTube Captions documentation](https://flashdata.dev/docs/sources/youtube_captions?utm_source=langchain&utm_medium=integration&utm_campaign=intent_gtm_2026q4&utm_content=youtube_captions-tool) for the current contract, [data handling](https://github.com/rocosen/langchain-flashdata/blob/main/PRIVACY.md) for credential and result flow, or contact support@flashdata.dev.
