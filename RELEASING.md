@@ -4,7 +4,8 @@ Source publication, PyPI publication, a LangChain listing request, and acceptanc
 into the official directory are separate milestones. PyPI publication uses the
 configured GitHub Trusted Publisher. Version 0.1.0 was first published on
 2026-10-09; version 0.1.1 updated installation documentation. Version 0.2.0 adds
-all 15 source-specific tools, download readers and task guides.
+all 15 source-specific tools, download readers and task guides. Version 0.2.1
+updates published repository and documentation links after the GitHub migration.
 
 ## Verify the release
 
@@ -33,7 +34,7 @@ Do not create another pending publisher for this existing package. Its settings 
 | Field | Value |
 | --- | --- |
 | PyPI project name | `langchain-flashdata` |
-| Owner | `flashdata-dev` |
+| GitHub owner | `rocosen` |
 | Repository | `langchain-flashdata` |
 | Workflow filename | `publish.yml` |
 | GitHub environment | `pypi` |
@@ -45,7 +46,7 @@ this package; it is not an npm or GitHub login.
 
 For each release, update the version in `pyproject.toml`, `uv.lock`, and the
 package user agent, then verify the release and merge its changes. Tag the
-verified main commit (for example `v0.2.0`), push the tag,
+verified main commit (for example `v0.2.1`), push the tag,
 and manually run **Publish to PyPI** with that tag selected. The workflow checks
 that the tag matches the package version, tests, builds, and publishes exactly the
 built wheel and source archive. It will not publish from a branch. Do not overwrite
