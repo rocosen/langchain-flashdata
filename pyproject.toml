@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "langchain-flashdata"
-version = "0.2.1"
+version = "0.2.2"
 description = "Google search, news, images, places and YouTube data/download tools for LangChain"
 readme = "README.md"
 requires-python = ">=3.10,<4.0"
@@ -30,7 +30,7 @@ dependencies = [
 ]
 
 [project.urls]
-Homepage = "https://flashdata.dev"
+Homepage = "https://flashdata.dev/?utm_source=langchain&utm_medium=integration&utm_campaign=intent_gtm_2026q4&utm_content=combined"
 Documentation = "https://github.com/rocosen/langchain-flashdata#readme"
 Repository = "https://github.com/rocosen/langchain-flashdata"
 Issues = "https://github.com/rocosen/langchain-flashdata/issues"

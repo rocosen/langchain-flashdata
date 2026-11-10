@@ -4,7 +4,7 @@ Prepare a product comparison from one Google Shopping query. Retain the merchant
 
 **Task:** Compare merchant result snapshots. This tool calls only `google_shopping` through `FlashDataGoogleShopping` in `langchain-flashdata` 0.2.0.
 
-[Google Shopping API fields and limits](https://flashdata.dev/docs/sources/google_shopping?utm_source=langchain&utm_medium=integration&utm_campaign=intent_gtm_2026q4&utm_content=google_shopping-tool) · [API pricing](https://flashdata.dev/pricing) · [All task guides](https://github.com/rocosen/langchain-flashdata/blob/main/docs/tools/README.md)
+[Google Shopping API fields and limits](https://flashdata.dev/docs/sources/google_shopping?utm_source=langchain&utm_medium=integration&utm_campaign=intent_gtm_2026q4&utm_content=google_shopping-tool) · [API pricing](https://flashdata.dev/pricing?utm_source=langchain&utm_medium=integration&utm_campaign=intent_gtm_2026q4&utm_content=google_shopping-tool) · [All task guides](https://github.com/rocosen/langchain-flashdata/blob/main/docs/tools/README.md)
 
 ## Install and authenticate
 
@@ -13,7 +13,7 @@ pip install 'langchain-flashdata==0.2.0'
 export FLASHDATA_API_KEY='YOUR_FLASHDATA_API_KEY'
 ```
 
-Create an account at [FlashData](https://flashdata.dev/signup), create an API key in the console, enable this source and fund the account. **The MIT Python package is free; FlashData API calls are paid and consume credits.** Check the current source rate and your account limits before running this example. LangChain is an open-source framework; optional model, hosting and LangSmith services can have their own charges.
+Create an account at [FlashData](https://flashdata.dev/signup?utm_source=langchain&utm_medium=integration&utm_campaign=intent_gtm_2026q4&utm_content=google_shopping-tool), create an API key in the console, enable this source and fund the account. **The MIT Python package is free; FlashData API calls are paid and consume credits.** Check the current source rate and your account limits before running this example. LangChain is an open-source framework; optional model, hosting and LangSmith services can have their own charges.
 
 ## Compare merchant result snapshots
 
