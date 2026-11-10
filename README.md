@@ -17,14 +17,14 @@ Requires Python 3.10 or newer (below Python 4). Install from
 pip install -U langchain-flashdata
 ```
 
-Create an API key in the [FlashData console](https://flashdata.dev), enable the
+Create an API key in the [FlashData console](https://flashdata.dev/signup?utm_source=langchain&utm_medium=integration&utm_campaign=intent_gtm_2026q4&utm_content=combined), enable the
 sources you need, and provide it through your environment:
 
 ```bash
 export FLASHDATA_API_KEY='YOUR_FLASHDATA_API_KEY'
 ```
 
-**The MIT package is free to install. FlashData API queries are paid and consume credits.** Check [current pricing](https://flashdata.dev/pricing)
+**The MIT package is free to install. FlashData API queries are paid and consume credits.** Check [current pricing](https://flashdata.dev/pricing?utm_source=langchain&utm_medium=integration&utm_campaign=intent_gtm_2026q4&utm_content=combined)
 and your account's available credits before running examples. Model provider
 charges are separate.
 

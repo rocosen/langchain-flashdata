@@ -4,7 +4,7 @@ Submit an asynchronous media-delivery job for a video you are authorized to proc
 
 **Task:** Deliver video or audio to customer storage. This tool calls only `youtube_download` through `FlashDataYouTubeDownload` in `langchain-flashdata` 0.2.0.
 
-[YouTube Download API fields and limits](https://flashdata.dev/docs/sources/youtube_download?utm_source=langchain&utm_medium=integration&utm_campaign=intent_gtm_2026q4&utm_content=youtube_download-tool) · [API pricing](https://flashdata.dev/pricing) · [All task guides](https://github.com/rocosen/langchain-flashdata/blob/main/docs/tools/README.md)
+[YouTube Download API fields and limits](https://flashdata.dev/docs/sources/youtube_download?utm_source=langchain&utm_medium=integration&utm_campaign=intent_gtm_2026q4&utm_content=youtube_download-tool) · [API pricing](https://flashdata.dev/pricing?utm_source=langchain&utm_medium=integration&utm_campaign=intent_gtm_2026q4&utm_content=youtube_download-tool) · [All task guides](https://github.com/rocosen/langchain-flashdata/blob/main/docs/tools/README.md)
 
 ## Install and authenticate
 
@@ -13,7 +13,7 @@ pip install 'langchain-flashdata==0.2.0'
 export FLASHDATA_API_KEY='YOUR_FLASHDATA_API_KEY'
 ```
 
-Create an account at [FlashData](https://flashdata.dev/signup), create an API key in the console, enable this source and fund the account. **The MIT Python package is free; FlashData API calls are paid and consume credits.** Check the current source rate and your account limits before running this example. LangChain is an open-source framework; optional model, hosting and LangSmith services can have their own charges.
+Create an account at [FlashData](https://flashdata.dev/signup?utm_source=langchain&utm_medium=integration&utm_campaign=intent_gtm_2026q4&utm_content=youtube_download-tool), create an API key in the console, enable this source and fund the account. **The MIT Python package is free; FlashData API calls are paid and consume credits.** Check the current source rate and your account limits before running this example. LangChain is an open-source framework; optional model, hosting and LangSmith services can have their own charges.
 
 ## Deliver video or audio to customer storage
 
@@ -62,7 +62,7 @@ Set `FLASHDATA_DOWNLOAD_STORAGE` to a JSON credential from your secret manager b
 {"storage_type":"s3","storage_url":"YOUR_BUCKET","region":"us-east-1","access_key":"YOUR_ACCESS_KEY","secret_key":"YOUR_SECRET_KEY","object_prefix":"langchain-clips"}
 ```
 
-The bucket/container must already exist. Other supported providers are S3-compatible, OSS, GCS, Azure, COS, BOS and TOS; use the [provider-specific storage fields](https://flashdata.dev/docs/sources/youtube_download). GCS uses a service account, Azure a write-enabled container SAS, and S3-compatible storage requires an endpoint. Keep the destination credential scoped to the intended bucket.
+The bucket/container must already exist. Other supported providers are S3-compatible, OSS, GCS, Azure, COS, BOS and TOS; use the [provider-specific storage fields](https://flashdata.dev/docs/sources/youtube_download?utm_source=langchain&utm_medium=integration&utm_campaign=intent_gtm_2026q4&utm_content=youtube_download-tool). GCS uses a service account, Azure a write-enabled container SAS, and S3-compatible storage requires an endpoint. Keep the destination credential scoped to the intended bucket.
 
 After saving the receipt, read the **same** ID in a later run:
 

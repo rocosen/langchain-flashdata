@@ -6,6 +6,7 @@ configured GitHub Trusted Publisher. Version 0.1.0 was first published on
 2026-10-09; version 0.1.1 updated installation documentation. Version 0.2.0 adds
 all 15 source-specific tools, download readers and task guides. Version 0.2.1
 updates published repository and documentation links after the GitHub migration.
+Version 0.2.2 adds channel attribution to website links in package metadata and guides.
 
 ## Verify the release
 
