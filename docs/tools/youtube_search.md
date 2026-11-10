@@ -4,7 +4,7 @@ Find a small set of YouTube videos for a tutorial or research question. Start wi
 
 **Task:** Shortlist videos by topic. This tool calls only `youtube_search` through `FlashDataYouTubeSearch` in `langchain-flashdata` 0.2.0.
 
-[YouTube Search API fields and limits](https://flashdata.dev/docs/sources/youtube_search?utm_source=langchain&utm_medium=integration&utm_campaign=intent_gtm_2026q4&utm_content=youtube_search-tool) · [API pricing](https://flashdata.dev/pricing?utm_source=langchain&utm_medium=integration&utm_campaign=intent_gtm_2026q4&utm_content=youtube_search-tool) · [All task guides](https://github.com/rocosen/langchain-flashdata/blob/main/docs/tools/README.md)
+[YouTube Search API fields and limits](https://flashdata.dev/docs/sources/youtube_search?utm_source=langchain&utm_medium=integration&utm_campaign=intent_gtm_2026q4&utm_content=youtube_search-tool) · [API pricing](https://flashdata.dev/pricing?utm_source=langchain&utm_medium=integration&utm_campaign=intent_gtm_2026q4&utm_content=youtube_search-task) · [All task guides](https://github.com/rocosen/langchain-flashdata/blob/main/docs/tools/README.md)
 
 ## Install and authenticate
 
@@ -13,7 +13,7 @@ pip install 'langchain-flashdata==0.2.0'
 export FLASHDATA_API_KEY='YOUR_FLASHDATA_API_KEY'
 ```
 
-Create an account at [FlashData](https://flashdata.dev/signup?utm_source=langchain&utm_medium=integration&utm_campaign=intent_gtm_2026q4&utm_content=youtube_search-tool), create an API key in the console, enable this source and fund the account. **The MIT Python package is free; FlashData API calls are paid and consume credits.** Check the current source rate and your account limits before running this example. LangChain is an open-source framework; optional model, hosting and LangSmith services can have their own charges.
+Create an account at [FlashData](https://flashdata.dev/signup?utm_source=langchain&utm_medium=integration&utm_campaign=intent_gtm_2026q4&utm_content=youtube_search-task), create an API key in the console, enable this source and fund the account. **The MIT Python package is free; FlashData API calls are paid and consume credits.** Check the current source rate and your account limits before running this example. LangChain is an open-source framework; optional model, hosting and LangSmith services can have their own charges.
 
 ## Shortlist videos by topic
 
